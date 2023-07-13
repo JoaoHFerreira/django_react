@@ -4,6 +4,7 @@
 * npm packages: 
    * npm install react-bootstrap bootstrap
    * npm install react-bootstrap
+   * npm install react-router-dom react-router-bootstrap
 
 # Project Setup
 After installed run
