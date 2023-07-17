@@ -1,9 +1,8 @@
 import React, { useEffect, useState } from 'react'
 import { useDispatch, useSelector } from 'react-redux';
-import { Link } from "react-router-dom";
-import { Row, Col, Image, ListGroup, Button, Card, Form } from "react-bootstrap";
+import { Link, useParams, useNavigate } from "react-router-dom";
 
-import { useParams } from 'react-router-dom';
+import { Row, Col, Image, ListGroup, Button, Card, Form } from "react-bootstrap";
 import Rating from "../components/Rating";
 import { listProductDetails } from '../actions/productActions';
 
@@ -13,16 +12,23 @@ import Message from '../components/Message';
 
 function ProductScreen() {
     const [qty, setQty] = useState(1);
-
     const { id } = useParams();
     const dispatch = useDispatch();
 
     const productDetails = useSelector(state => state.productDetails)
     const { loading, error, product } = productDetails
 
+    let navigate = useNavigate();
+
     useEffect(() => {
         dispatch(listProductDetails(id))
         }, [])
+
+    
+    const addToCartHandler = () => {
+        navigate(`/cart/${id}?qty=${qty}`);
+        };
+
     
     return (
         <div>
@@ -105,7 +111,13 @@ function ProductScreen() {
                                         )}
            
                                        <ListGroup.Item>
-                                           <Button className="btn-block" disabled={product.countInStock ==0} type='button'>Add to Cart</Button>
+                                           <Button
+                                                onClick={addToCartHandler}
+                                                className="btn-block" 
+                                                disabled={product.countInStock ==0} 
+                                                type='button'>
+                                            Add to Cart
+                                            </Button>
                                        </ListGroup.Item>
                                        
                                    </ListGroup>
