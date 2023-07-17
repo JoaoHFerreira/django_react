@@ -75,3 +75,9 @@ first run $ python manage.py migrate
 
 
 check https://react-bootstrap.github.io/ for documentation and available components
+
+
+
+branch-name-pattern
+proshop-chapter22
+projectname-activechapterNUMBER
