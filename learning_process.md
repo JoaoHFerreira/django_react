@@ -70,3 +70,8 @@ first run $ python manage.py makemigrations
 to create all scripts and after
 
 first run $ python manage.py migrate
+
+
+
+
+check https://react-bootstrap.github.io/ for documentation and available components
