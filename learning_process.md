@@ -81,3 +81,8 @@ check https://react-bootstrap.github.io/ for documentation and available compone
 branch-name-pattern
 proshop-chapter22
 projectname-activechapterNUMBER
+
+
+
+auth method for django, check djangorestframework doc, very complet about that
+https://django-rest-framework-simplejwt.readthedocs.io/en/latest/getting_started.html
