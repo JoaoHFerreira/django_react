@@ -148,3 +148,18 @@ Django REST framework provides various authentication options. One commonly used
 
 - **Document Your Code**:
    - Write clear and concise comments and documentation for your code, making it easier for others (and yourself) to understand the codebase.
+
+
+
+
+token snippetes
+https://django-rest-framework-simplejwt.readthedocs.io/en/latest/customizing_token_claims.html
+
+
+
+its importantint to mention that in django rest framework are a decoreator called permission clases
+```py
+from rest_framework.decorators import api_view, permission_classes
+from rest_framework.permissions import IsAuthenticated, IsAdminUser
+```
+this will set which method need or not to have validation
