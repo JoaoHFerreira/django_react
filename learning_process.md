@@ -168,3 +168,5 @@ this will set which method need or not to have validation
 <!-- path("api/products/", include("base.urls.product_urls")), -->
 
 in backend is the point to the url, in product_urls, is possible to use "" to access products
+
+create rest_framework signals file inside base app
